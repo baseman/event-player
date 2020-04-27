@@ -1,4 +1,4 @@
-package co.remotectrl.eventctrl
+package co.remotectrl.ctrl.event
 
 interface CtrlCommand<TAggregate : CtrlAggregate<TAggregate>> {
 

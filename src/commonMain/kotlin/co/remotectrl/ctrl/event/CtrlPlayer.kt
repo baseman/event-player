@@ -1,4 +1,4 @@
-package co.remotectrl.eventctrl
+package co.remotectrl.ctrl.event
 
 class CtrlPlayer<TAggregate : CtrlAggregate<TAggregate>> {
     fun playFor(evts: Array<CtrlEvent<TAggregate>>, aggregate: TAggregate) {

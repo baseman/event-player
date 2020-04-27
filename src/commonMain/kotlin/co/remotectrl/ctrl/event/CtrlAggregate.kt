@@ -1,4 +1,4 @@
-package co.remotectrl.eventctrl
+package co.remotectrl.ctrl.event
 
 interface CtrlAggregate<TAggregate : CtrlAggregate<TAggregate>> {
     val legend: AggregateLegend<TAggregate>
@@ -7,8 +7,8 @@ interface CtrlAggregate<TAggregate : CtrlAggregate<TAggregate>> {
 data class AggregateId<TAggregate>(val value: String) where TAggregate : CtrlAggregate<TAggregate>
 
 data class AggregateLegend<TAggregate : CtrlAggregate<TAggregate>>(
-    val aggregateId: AggregateId<TAggregate>,
-    val latestVersion: Int
+        val aggregateId: AggregateId<TAggregate>,
+        val latestVersion: Int
 ) {
     constructor(
         aggregateIdVal: String,
