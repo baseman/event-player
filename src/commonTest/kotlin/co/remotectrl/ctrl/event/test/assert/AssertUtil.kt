@@ -1,4 +1,4 @@
-package co.remotectrl.ctrl.shell.common.assert
+package co.remotectrl.ctrl.event.test.assert
 
 import co.remotectrl.ctrl.event.AggregateLegend
 import co.remotectrl.ctrl.event.CtrlAggregate
