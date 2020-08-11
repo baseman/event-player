@@ -8,12 +8,12 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61")
+        classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.0-rc")
     }
 }
 
 plugins {
-    kotlin("multiplatform") version "1.3.70"
+    kotlin("multiplatform") version "1.4.0-rc"
 }
 
 repositories {
@@ -24,7 +24,6 @@ kotlin {
 
     targets {
         jvm {
-
         }
 
         js {
