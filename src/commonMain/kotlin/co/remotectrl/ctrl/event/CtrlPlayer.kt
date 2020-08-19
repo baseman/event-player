@@ -5,7 +5,7 @@ class CtrlPlayer<TAggregate : CtrlAggregate<TAggregate>>(
 ) {
     val mutable = CtrlMutable(aggregate = aggregate)
 
-    fun playFor(event: CtrlEvent<TAggregate>) : CtrlTry<Unit> = CtrlTry.invoke{
+    fun playFor(event: CtrlEvent<TAggregate>): CtrlTry<Unit> = CtrlTry.invoke {
         event.applyTo(mutable)
     }
 

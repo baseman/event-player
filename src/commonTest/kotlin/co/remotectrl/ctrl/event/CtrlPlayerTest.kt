@@ -75,7 +75,7 @@ class ControlPlayerTest {
         val player = getPlayer(stubMaxVal)
 
         val played = player.playFor(
-            command = StubChangeCommand() //cannot increment higher
+            command = StubChangeCommand() // cannot increment higher
         )
 
         assertTrue(played is CtrlTry.Failure)
@@ -93,7 +93,7 @@ class ControlPlayerTest {
             commands = listOf(
                 StubCountIteratorCommand(),
                 StubCountIteratorCommand(),
-                StubCountIteratorCommand(), //cannot increment higher
+                StubCountIteratorCommand(), // cannot increment higher
                 StubCountIteratorCommand()
             )
         )
@@ -117,9 +117,9 @@ class ControlPlayerTest {
 
 private const val stubMaxVal = 2
 var cmdAttemptCountIterator = 0
-class StubCountIteratorCommand : StubChangeCommand(){
+class StubCountIteratorCommand : StubChangeCommand() {
     override fun validate(aggregate: StubAggregate, validation: CtrlValidation) {
-        if(cmdAttemptCountIterator > stubMaxVal){
+        if (cmdAttemptCountIterator > stubMaxVal) {
             throw Exception("tried to continue parsing commands after initial failure")
         }
         super.validate(aggregate, validation)
