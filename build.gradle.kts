@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 group = "co.remotectrl.eventplayer"
 version = "1.0"
 
@@ -8,12 +6,12 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.0")
+        classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.32")
     }
 }
 
 plugins {
-    kotlin("multiplatform") version "1.4.0"
+    kotlin("multiplatform") version "1.4.32"
 }
 
 repositories {
